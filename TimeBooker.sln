@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34723.18
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TimeBooker.Server.WebAPI", "TimeBooker.Server.WebAPI\TimeBooker.Server.WebAPI.csproj", "{AF3D033A-641B-4EB3-807D-603212C25C3C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TimeBooker.Model", "TimeBooker.Model\TimeBooker.Model.csproj", "{30265E95-E6CB-4878-B778-B0CA09910A9A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF3D033A-641B-4EB3-807D-603212C25C3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF3D033A-641B-4EB3-807D-603212C25C3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF3D033A-641B-4EB3-807D-603212C25C3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF3D033A-641B-4EB3-807D-603212C25C3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30265E95-E6CB-4878-B778-B0CA09910A9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30265E95-E6CB-4878-B778-B0CA09910A9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30265E95-E6CB-4878-B778-B0CA09910A9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30265E95-E6CB-4878-B778-B0CA09910A9A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4DB5011E-6890-47F5-8A30-EECBC43D5027}
+	EndGlobalSection
+EndGlobal
