@@ -18,7 +18,7 @@ const LoginForm = () => {
     useEffect(() => {
         checkCookies();
         const redirectIfHasCookies = () => {
-            if(hasCookies)
+            if (hasCookies)
                 history.push("/");
         };
         redirectIfHasCookies();
@@ -70,7 +70,7 @@ const LoginForm = () => {
 
     return (
         <div>
-            <Navbar showLogin={false}/>
+            <Navbar showLogin={false} />
             <div className="container mt-5">
                 <div className="row justify-content-center">
                     <div className="col-md-6">

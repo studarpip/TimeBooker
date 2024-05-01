@@ -17,7 +17,7 @@ const Navbar = ({ showLogin = true }) => {
     const handleLogout = async () => {
         deleteCookie("SessionId");
         deleteCookie("UserId");
-        
+
         try {
             const sessionId = getCookie("SessionId");
             const response = await fetch("https://localhost:7000/auth/logout", {

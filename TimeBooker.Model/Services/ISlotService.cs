@@ -9,7 +9,7 @@ namespace TimeBooker.Model.Services
     public interface ISlotService
     {
         ServerResult<List<SlotStatusResponse>> GetSlotStatuses();
-        Task<ServerResult> CreateSlotsAsync (CreateSlotsRequest request);
+        Task<ServerResult> CreateSlotsAsync(CreateSlotsRequest request);
         Task<ServerResult> DeleteSlotAsync(int slotId);
         Task<ServerResult> UpdateSlotAsync(UpdateSlotRequest request);
         Task<ServerResult<List<Slot>>> GetSlotsAsync(int? status, DateTime? date);
