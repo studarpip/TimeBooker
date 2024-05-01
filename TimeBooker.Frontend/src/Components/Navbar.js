@@ -15,6 +15,9 @@ const Navbar = ({ showLogin = true }) => {
     };
 
     const handleLogout = async () => {
+        deleteCookie("SessionId");
+        deleteCookie("UserId");
+        
         try {
             const sessionId = getCookie("SessionId");
             const response = await fetch("https://localhost:7000/auth/logout", {
@@ -28,9 +31,6 @@ const Navbar = ({ showLogin = true }) => {
             if (!response.ok) {
                 throw new Error("Logout failed");
             }
-
-            deleteCookie("SessionId");
-            deleteCookie("UserId");
 
             history.push("/");
             window.location.reload(true);
