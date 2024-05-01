@@ -1,0 +1,5 @@
+CREATE TABLE Sessions (
+    SessionId VARCHAR(255) PRIMARY KEY,
+    UserId INT NOT NULL,
+    ExpirationDate DATETIME NOT NULL
+);

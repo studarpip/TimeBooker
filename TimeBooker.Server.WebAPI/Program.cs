@@ -1,5 +1,6 @@
 
 using TimeBooker.Model.Repositories;
+using TimeBooker.Model.Services;
 
 namespace TimeBooker
 {
@@ -37,6 +38,13 @@ namespace TimeBooker
         private static void RegisterServices(IServiceCollection services)
         {
             services.AddSingleton<IRepository, Repository>();
+            services.AddSingleton<IAuthService, AuthService>();
+            services.AddSingleton<IUserService, UserService>();
+            services.AddSingleton<IUserRepository, UserRepository>();
+            services.AddSingleton<ISessionService, SessionService>();
+            services.AddSingleton<ISessionRepository, SessionRepository>();
+            services.AddSingleton<ISlotService, SlotService>();
+            services.AddSingleton<ISlotRepository, SlotRepository>();
         }
     }
 }

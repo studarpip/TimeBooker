@@ -1,0 +1,16 @@
+.navbar-nav .nav-link.btn.btn-outline-light .icon,
+.navbar-nav .nav-link.btn.btn-outline-light .text {
+    color: #fff !important;
+    transition: color 0.3s !important;
+}
+
+.navbar-nav .nav-link.btn.btn-outline-light:hover .icon,
+.navbar-nav .nav-link.btn.btn-outline-light:hover .text {
+    color: #000 !important;
+}
+
+
+.icon {
+    font-size: 24px;
+    color: white;
+}
