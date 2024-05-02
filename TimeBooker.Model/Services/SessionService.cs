@@ -42,9 +42,9 @@ namespace TimeBooker.Model.Services
             await DeleteExpiredSessionsAsync();
 
             var session = await _sessionRepository.GetAsync(sessionId);
-            if(session is null) return false;
-            if(session.ExpirationDate <  DateTime.Now) return false;
-            if(session.UserId != userId) return false;
+            if (session is null) return false;
+            if (session.ExpirationDate < DateTime.Now) return false;
+            if (session.UserId != userId) return false;
 
             return true;
         }

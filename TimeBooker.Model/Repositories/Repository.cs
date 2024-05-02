@@ -11,12 +11,10 @@ public class Repository : IRepository
 {
     private readonly IConfiguration _configuration;
 
-	public Repository(
-		IConfiguration configuration
-		)
-	{
-		_configuration = configuration;
-	}
+    public Repository(IConfiguration configuration)
+    {
+        _configuration = configuration;
+    }
 
     public async Task<IEnumerable<TRes>> QueryListAsync<TRes, T>(string command, T parameters)
     {
