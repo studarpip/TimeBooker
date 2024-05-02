@@ -16,3 +16,8 @@
     border-radius: 5px;
     padding: 10px;
 }
+
+.icon-button {
+    display: inline-block;
+    vertical-align: middle;
+}

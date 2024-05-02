@@ -35,7 +35,7 @@ const Navbar = ({ showLogin = true }) => {
             history.push("/");
             window.location.reload(true);
         } catch (error) {
-            console.log(error);
+            console.error('Error loging out:', error);
         }
     };
 

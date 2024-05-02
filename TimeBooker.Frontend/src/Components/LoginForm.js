@@ -18,7 +18,7 @@ const LoginForm = () => {
     useEffect(() => {
         checkCookies();
         const redirectIfHasCookies = () => {
-            if(hasCookies)
+            if (hasCookies)
                 history.push("/");
         };
         redirectIfHasCookies();
@@ -53,7 +53,6 @@ const LoginForm = () => {
             const serverResult = await response.json();
 
             if (serverResult.success) {
-                console.log(serverResult);
                 deleteCookie("SessionId");
                 deleteCookie("UserId");
                 const expirationDate = new Date(Date.now() + 10 * 60 * 1000);
@@ -70,7 +69,7 @@ const LoginForm = () => {
 
     return (
         <div>
-            <Navbar showLogin={false}/>
+            <Navbar showLogin={false} />
             <div className="container mt-5">
                 <div className="row justify-content-center">
                     <div className="col-md-6">

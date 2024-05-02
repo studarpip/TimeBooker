@@ -3,6 +3,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./Navbar";
 import { getCookie } from "../Utilities/cookieUtils";
 import "./Home.css";
+import { FaRegTrashAlt, FaPencilAlt } from "react-icons/fa";
+
 
 const Home = () => {
     const [selectedDate, setSelectedDate] = useState("");
@@ -268,6 +270,14 @@ const Home = () => {
             return;
         }
         event.preventDefault();
+        if (parseInt(editedSlot.status) !== 1 && !editedSlot.email) {
+            alert("Email is required when status is not available.");
+            return;
+        }
+        if (parseInt(editedSlot.status) === 1 && editedSlot.email) {
+            alert("Email is must be empty when status is available.");
+            return;
+        }
         try {
             const response = await fetch("https://localhost:7000/slots/update", {
                 method: "PUT",
@@ -354,8 +364,12 @@ const Home = () => {
                                     <div>Date: {new Date(new Date(slot.dateTime).getTime() + (3 * 60 * 60 * 1000)).toISOString().replace('T', ' ').slice(0, 16)}</div>
                                     {hasCookies && (
                                         <div>
-                                            <button className="btn btn-danger me-2" onClick={(e) => handleDeleteOpen(e, slot.id)}>Delete</button>
-                                            <button className="btn btn-warning" onClick={() => openEditModal(slot)}>Edit</button>
+                                            <button className="btn btn-danger me-2 icon-button" onClick={(e) => handleDeleteOpen(e, slot.id)}>
+                                                <FaRegTrashAlt />
+                                            </button>
+                                            <button className="btn btn-warning icon-button" onClick={() => openEditModal(slot)}>
+                                                <FaPencilAlt />
+                                            </button>
                                         </div>
                                     )}
                                     {!hasCookies && slot.status === 1 && (
@@ -482,7 +496,7 @@ const Home = () => {
                                         type="email"
                                         className="form-control"
                                         id="editEmail"
-                                        value={editedSlot ? editedSlot.email : ''}
+                                        value={editedSlot && editedSlot.email ? editedSlot.email : ''}
                                         onChange={(e) => setEditedSlot({ ...editedSlot, email: e.target.value })}
                                     />
                                 </div>
